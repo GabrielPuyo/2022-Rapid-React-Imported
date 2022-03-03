@@ -9,10 +9,12 @@ import edu.wpi.first.networktables.NetworkTableInstance;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.ArcadeDrive;
 import frc.robot.commands.AutoCenter;
 import frc.robot.subsystems.Drive;
+import frc.robot.subsystems.intake;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -28,6 +30,9 @@ public class RobotContainer {
   private static NetworkTableInstance tableInstance;
   private static NetworkTable limelight;
   public static Joystick stick;
+  public static intake intakeSubsys;
+  // public static intake Intakemotor = new intake();
+  // public static intake;
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
