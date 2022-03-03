@@ -19,8 +19,11 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 public class Drive extends PIDSubsystem {
+
   public CANSparkMax frontLeft, frontRight, backRight, backLeft;
+
   MotorControllerGroup left, right;
+  
   public DifferentialDrive drive;
   //public DoubleSolenoid shifter;
   /** Creates a new Drive. */
