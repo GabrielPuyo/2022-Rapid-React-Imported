@@ -8,10 +8,14 @@ import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 
+// 
+
 public class intake extends SubsystemBase {
   /** Creates a new intake. */
   public  Talon IntakeMotor;
   public  int intakeChannel;
+
+
   public intake(int channel) {
     this.intakeChannel = channel;
     IntakeMotor = new Talon(intakeChannel);
@@ -20,5 +24,9 @@ public class intake extends SubsystemBase {
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
+  }
+  public void setDefaultCommand(){
+    
+
   }
 }

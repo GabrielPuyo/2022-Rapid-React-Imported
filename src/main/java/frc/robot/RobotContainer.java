@@ -30,7 +30,7 @@ public class RobotContainer {
   private static NetworkTableInstance tableInstance;
   private static NetworkTable limelight;
   public static Joystick stick;
-  public static intake intakeSubsys;
+  public static intake intakeSubsys = new intake(Constants.INTAKE_MOTOR);
   // public static intake Intakemotor = new intake();
   // public static intake;
 
