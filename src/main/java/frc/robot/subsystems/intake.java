@@ -4,29 +4,45 @@
 
 package frc.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+
 import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
+import frc.robot.commands.InatkeCommand;
+// import com.ctre.CANTalon;
+
+
+
 
 
 // 
 
-public class intake extends SubsystemBase {
-  /** Creates a new intake. */
-  public  Talon IntakeMotor;
-  public  int intakeChannel;
+public class Intake extends SubsystemBase {
+  /** Creates a new Intake. */
+  public  TalonSRX IntakeMotor;
+  // public CANTalon intakeMotor;
+  
 
 
-  public intake(int channel) {
-    this.intakeChannel = channel;
-    IntakeMotor = new Talon(intakeChannel);
+  public Intake() {
+    // this.IntakeChannel = channel;
+    IntakeMotor = new TalonSRX(Constants.INTAKE_MOTOR);
+    // this.setDefaultCommand(new InatkeCommand());
+  }
+  public void runIntake(float negOnetoPosOne){
+    IntakeMotor.set(ControlMode.PercentOutput, negOnetoPosOne);
+
+  }
+  public void stopIntake(){
+    IntakeMotor.set(ControlMode.PercentOutput,0);
+
   }
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
   }
-  public void setDefaultCommand(){
-    
-
-  }
+  
 }
