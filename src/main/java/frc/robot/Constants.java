@@ -18,7 +18,9 @@ public final class Constants {
     BOTTOM_LEFT_DRIVE = 1,
     TOP_RIGHT_DRIVE = 3,
     BOTTOM_RIGHT_DRIVE = 2,
-    INTAKE_MOTOR = 15;
+    INTAKE_MOTOR = 51,
+    INTAKE_BUTTON = 3;
+    
     
     // this int is a placholder for now cuz colin doesn't know which
     // controller to use or whatever 
@@ -28,4 +30,5 @@ public final class Constants {
     SHIFER_REVERSE = 2;
 
     public static final int STICK = 0;
+    public static final float INTAKE_MOTOR_SPEED = 0.1f;
 }
