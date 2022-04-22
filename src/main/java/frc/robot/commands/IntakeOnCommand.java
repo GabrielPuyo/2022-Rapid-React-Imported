@@ -30,13 +30,13 @@ public class IntakeOnCommand extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    if(RobotContainer.stick.getRawButton(Constants.INTAKE_BUTTON)){
+    // if(RobotContainer.stick.getRawButton(Constants.INTAKE_BUTTON)){
       RobotContainer.IntakeSubsys.runIntake(Constants.INTAKE_MOTOR_SPEED);
-      System.out.println("Intake command is running");
-    }
-    else{
-      RobotContainer.IntakeSubsys.stopIntake();
-    }
+      // System.out.println("Intake command is running");
+    // }
+    // else{
+    //   RobotContainer.IntakeSubsys.stopIntake();
+    // }
   }
 
   // Called once the command ends or is interrupted.
