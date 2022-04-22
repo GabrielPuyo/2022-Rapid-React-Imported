@@ -13,7 +13,8 @@ import edu.wpi.first.wpilibj.motorcontrol.Talon;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.ArcadeDrive;
 import frc.robot.commands.AutoCenter;
-import frc.robot.commands.InatkeCommand;
+import frc.robot.commands.IntakeOnCommand;
+import frc.robot.commands.IntakeOffCommand;
 import frc.robot.subsystems.Drive;
 import frc.robot.subsystems.Intake;
 
@@ -31,10 +32,10 @@ public class RobotContainer {
   private static NetworkTableInstance tableInstance;
   private static NetworkTable limelight;
   public static Joystick stick;
-  // public static InatkeCommand IntakeCommand = new InatkeCommand();
+  // public static IntakeOnCommand IntakeCommand = new IntakeOnCommand();
 
   public static Intake IntakeSubsys = new Intake();
-  public InatkeCommand inatkeCommand = new InatkeCommand();
+  public IntakeOnCommand IntakeOnCommand = new IntakeOnCommand();
   // public static Intake Intakemotor = new Intake();
   // public static Intake;
 
@@ -47,7 +48,7 @@ public class RobotContainer {
     tableInstance = NetworkTableInstance.getDefault();
     limelight = tableInstance.getTable("limelight");
     drive.setDefaultCommand(new ArcadeDrive());
-    IntakeSubsys.setDefaultCommand(new InatkeCommand());
+    IntakeSubsys.setDefaultCommand(new IntakeOffCommand());
   }
 
   public static double limelightX() {
@@ -64,7 +65,7 @@ public class RobotContainer {
     JoystickButton Aline = new JoystickButton(stick, 2);
     Aline.whenHeld(new AutoCenter());
     JoystickButton intakeButtonMap = new JoystickButton(stick, Constants.INTAKE_BUTTON);
-    intakeButtonMap.whenHeld(new InatkeCommand());
+    intakeButtonMap.whenHeld(new IntakeOnCommand());
     
 
   }
