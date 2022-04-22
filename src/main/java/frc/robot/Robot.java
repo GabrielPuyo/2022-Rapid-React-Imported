@@ -81,7 +81,7 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    System.out.println( RobotContainer.limelightX());
+    // System.out.println( RobotContainer.stick.getRawButton(Constants.INTAKE_BUTTON));
   }
 
   @Override

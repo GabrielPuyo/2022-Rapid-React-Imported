@@ -34,6 +34,7 @@ public class RobotContainer {
   // public static InatkeCommand IntakeCommand = new InatkeCommand();
 
   public static Intake IntakeSubsys = new Intake();
+  public InatkeCommand inatkeCommand = new InatkeCommand();
   // public static Intake Intakemotor = new Intake();
   // public static Intake;
 
@@ -64,6 +65,7 @@ public class RobotContainer {
     Aline.whenHeld(new AutoCenter());
     JoystickButton intakeButtonMap = new JoystickButton(stick, Constants.INTAKE_BUTTON);
     intakeButtonMap.whenHeld(new InatkeCommand());
+    
 
   }
 

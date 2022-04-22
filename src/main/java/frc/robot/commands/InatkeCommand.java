@@ -23,13 +23,20 @@ public class InatkeCommand extends CommandBase {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
+    // RobotContainer.IntakeSubsys.disable();
     
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    RobotContainer.IntakeSubsys.runIntake(Constants.INTAKE_MOTOR_SPEED);
+    if(RobotContainer.stick.getRawButton(Constants.INTAKE_BUTTON)){
+      RobotContainer.IntakeSubsys.runIntake(Constants.INTAKE_MOTOR_SPEED);
+      System.out.println("Intake command is running");
+    }
+    else{
+      RobotContainer.IntakeSubsys.stopIntake();
+    }
   }
 
   // Called once the command ends or is interrupted.
