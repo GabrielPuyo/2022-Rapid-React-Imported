@@ -18,8 +18,8 @@ public final class Constants {
     BOTTOM_LEFT_DRIVE = 1,
     TOP_RIGHT_DRIVE = 3,
     BOTTOM_RIGHT_DRIVE = 2,
-    INTAKE_MOTOR = 51,
-    INTAKE_BUTTON = 3;
+    INTAKE_MOTOR = 51,  
+    INTAKE_BUTTON = 3;  //'x' button on xbox
     
     
     // this int is a placholder for now cuz colin doesn't know which
@@ -30,5 +30,5 @@ public final class Constants {
     SHIFER_REVERSE = 2;
 
     public static final int STICK = 0;
-    public static final float INTAKE_MOTOR_SPEED = 0.1f;
+    public static final float INTAKE_MOTOR_SPEED = 0.2f;
 }
